@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+            Array and Loops
+        </title>
+    </head>
+    <body>
+
+        <!-- <p> Todo Practice 1</p>    
+        <input placeholder="Create a List" id="list">
+        <button onclick="storeList()"> Add</button> -->
+
+        <p> Todo Practice 2</p>    
+        <input placeholder="Create a List" id="list" onkeydown="key()">
+        <button onclick="storeList()"> Add</button>
+        <div class="displaylist">
+
+        </div>
+
+        <script>
+            
+
+            function key(){
+                if (event.key == 'Enter'){
+                    storeList()
+                }
+            }
+            const render = document.querySelector('.displaylist')
+            render.innerHTML = ''
+            
+            function display(){
+                for(let i = newarr.length - 1; i < newarr.length; i++) {
+
+                    const list = newarr[i];
+                    console.log(list);
+                    const html = `<p>${list}</p>`;
+                    render.innerHTML += html
+                }
+            }
+           
+            let newarr = [];
+            function storeList(){
+                const list = document.querySelector('#list');
+                const newlist = list.value;
+                newarr.push(newlist)
+                console.log(newarr)
+                list.value = '';
+
+                display();
+              
+            }
+        </script>
+
+    </body>
+</html>

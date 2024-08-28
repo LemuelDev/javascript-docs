@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section class="cart">
+        <h3> Shopping Cart Practice With Javascript</h3>
+
+    <div class="main">
+        
+    <p class="una">
+        <button onclick="bball()"> BASKETBALL</button>
+        <button onclick="umb()"> UMBRELLA</button>
+        <button onclick="socks()"> SOCKS</button>
+    </p>
+
+    <p>
+        <button onclick="shirt()"> SHIRT </button>
+        <button onclick="sleeve()"> LONG SLEEVE </button>
+        <button onclick="hoodies()"> HOODIES </button>
+    </p>
+
+    <button id="pricebtn">SHOW PRICES</button>
+    </div>
+
+    <div class="resultt">
+        <div>
+         <p class="cartt"> MY CART </p>
+
+        <p id="result"></p>
+       
+        
+            </div>
+
+        <div class="last">
+            <p class="title"> PRICE</p>
+            
+            <div class="pricing">
+             <p id="price"></p>
+            
+            </div>
+
+     
+        </div>
+        <button id="btn">Delete</button>
+    </div>
+    
+    </section>
+
+    <script>
+
+        let pricebtn = document.getElementById('pricebtn')
+        let result = document.getElementById('result')
+        let price = document.getElementById('price')
+        const btn = document.getElementById('btn')
+     
+        btn.addEventListener('click', () => {
+                result.innerHTML = ''
+                price.innerHTML = ''
+
+            });
+        
+        pricebtn.addEventListener('click', () => {
+            let burnik = document.createElement('burnik')
+            burnik.innerHTML = 'PRICES <BR> BASKETBALL - 10.50 <br> '
+            burnik.innerHTML = 'hello world'
+            burnik.style.paddingBlock = '2rem'
+            burnik.style.paddingInline = '2rem'
+            burnik.style.border = '1px solid black'
+           
+        })
+    
+
+        function bball() {
+            result.innerHTML += ' BASKETBALL <br>';
+            price.innerHTML += ('10.50') + '<br>'
+            
+        }
+        function umb() {
+            result.innerHTML += ' UMBRELLA <br>';
+            price.innerHTML += ('7.50')+ '<br>'
+           
+        }
+
+        function socks() {
+            result.innerHTML += '  SOCKS <br>';
+            price.innerHTML += ' 11.50 <br>';
+           
+        }
+
+        function shirt() {
+            result.innerHTML += ' SHIRT <br>';
+            price.innerHTML += ' $20.50 <br>';
+             
+        }
+
+        function sleeve() {
+            result.innerHTML += ' SLEEVE <br>';
+            price.innerHTML += '$25.50 <br>';
+           
+        }
+
+        function hoodies() {
+            result.innerHTML += ' HOODIES <br>';
+            price.innerHTML += '$15.50 <br>';
+        
+        }
+
+
+
+    </script>
+
+
+</body>
+<style>
+    /* .cart {
+        margin-block-end: 13px;
+        margin-top: 0;
+        padding-bottom: .5em;
+   
+    } */
+  
+    /* #price {
+      margin-bottom: 10px;
+      padding-top: 10px;
+    }
+    #result {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+    #btn {
+        padding: .3rem .5rem;
+        margin-bottom: 10px;
+    }
+    div h3 {
+        margin-top: 5px;
+    }
+    .oks {
+        margin-top: .5em;
+    } */
+</style>
+</html>

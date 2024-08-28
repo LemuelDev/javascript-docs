@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plus One</title>
+</head>
+<body>
+    <!-- <div id="counter">0</div>
+<button onclick="countUp()">Up</button>
+<button onclick="countDown()">Down</button> -->
+<input type="text" id="todo-title"/>
+<button onclick="addList()">List</button>
+<script>
+   function addList() {
+    let textbox = document.getElementById('todo-title');
+    let list = textbox.value;
+    
+    let element = document.createElement('div');
+            element.innerText = list;
+        document.body.appendChild(element);
+   }
+
+
+//   let count = 0;
+
+//   function countUp() {
+//     count = count + 1;
+//     let counter = document.getElementById('counter');
+//     counter.innerText = count;
+//   }
+
+//   function countDown (){
+//     count = count - 1;
+//     let counter = document.getElementById('counter');
+//     counter.innerText = count;
+//   }
+</script> 
+   
+</body>
+</html>

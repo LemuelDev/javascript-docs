@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY MOMMY</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    
+
+    <div class="content">
+        <div class="message">
+            <h4> HAPPY BIRTHDAY MY LOVE </h4>
+            <button id="mainbutt"> <i class="fa-solid fa-envelope"></i> </button>
+        </div>
+    </div>
+
+    <div class="hidden" id="hidden">
+        <h4>
+            Dearest Marites,
+        </h4>
+        <p>
+            Today marks your 19th birthday and I am overwhelmed with joy and gratitude for having you in my life. These past 21 months have been a wonderful journey of love, laughter, and growth, and I can't imagine spending it with anyone else but you.
+        </p>
+        <button class="next" id="next"> <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <div class="hidden2" id="hidden2">
+        <h4 id="close"> X</h4>
+        <p>
+            Happy happy birthday mahal! Continue to strive to be better everyday and always do your best in everything in life. I'm so proud of you to overcome those challenges and sleepless nights despite of your mental condition and a clumsy one. 
+            I apologize if for now I can't give the thing you want today, but will give you a lot of love and assurance para hindi lugi HAHAHA!!!!
+            I wish all the best things may happen to your life. YOur dream job, car, and family. I LOVE YOU ALWAYS MARITES SINCE DAY 1.
+            <span><br>  Yours always, <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; Bogart.</span>
+        </p>
+    </div>
+
+    <script>
+        const mainbutt = document.getElementById('mainbutt');
+        const next = document.getElementById('next');
+        const close = document.getElementById('close');
+        const hidden = document.getElementById('hidden');
+        const hidden2 = document.getElementById('hidden2');
+
+        mainbutt.addEventListener('click', () => {
+            hidden.style.display = 'block';
+        })
+
+        next.addEventListener('click', () => {
+            hidden2.style.zIndex = '50';
+            hidden2.style.display = 'block';
+         })
+
+         close.addEventListener('click', () => { 
+            hidden2.style.display = 'none';
+            hidden.style.display = 'none';
+         })
+
+
+    </script>
+
+</body>
+
+</html>

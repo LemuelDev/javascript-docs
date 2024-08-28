@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+</head>
+<body>
+   
+    <div class="calcu">
+        <h4> Simple Calculator</h4>
+        <div class="textbox">
+            <div>
+                <h5 class="title"> Enter First Number:</h5>
+                <input type="text" id='pers' class="base">
+            </div>
+          
+           <div>
+            <h5 class="title"> Enter Last Number:</h5>
+            <input type="text" class="under" id="under">
+           </div>
+           <div>
+            <h5 class="title"> Answer:</h5>
+            <input type="text" class="sagot" id='result' readonly >
+           </div>
+        </div>
+        <div class="operators">
+            <button onclick="addItem('1')">
+                +
+            </button>
+            <button onclick="addItem('2')"> - </button>
+            <button onclick="addItem('3')"> * </button>
+            <button onclick="addItem('4')"> / </button>
+        </div>
+    </div>
+    <button onclick="nextTheme()" class="theme">
+        Change Theme
+    </button>
+
+    <div class="footer">
+        <h4> lemuel_dev || 2023 </h4>
+    </div>
+
+  
+
+   <script>
+       let index = 0;
+       function nextTheme(){
+        let colors = ["red", "orange","yellow", "green", "gray", "brown"];
+
+        document.getElementsByTagName("body")[0].style.background = colors[index++];
+
+        if (index > colors.length - 1)
+        index = 0;
+       }
+
+       function addItem(calcu){
+       
+        let pers = parseFloat(document.getElementById('pers').value);
+        let under = parseFloat(document.getElementById('under').value);
+        let key;
+           switch(calcu){
+             case '1':
+                key = pers + under;
+                break;
+
+            case '2':
+                key = pers - under;
+                break;
+
+            case '3':
+                key = pers * under;
+                break;
+
+            case '4':
+                key = pers / under;
+                break;
+           }
+           document.getElementById('result').value =key;
+           
+        }
+        
+   </script>
+</body>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+        font-family: sans-serif;
+        font-weight: 500;
+        display: grid;
+        place-content: center;
+        align-items: center;
+        background: linear-gradient(45deg,
+        rgb(213, 89, 224), rgb(49, 49, 204));
+    }
+
+    .calcu {
+        border: 1px solid #111;
+        padding-block: 2rem;
+        padding-inline: 2rem;
+        width: 100%;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        border-radius: 10px;
+        margin-top: 4rem;
+    }
+
+    .title {
+        margin: 0;
+        padding-block: 1rem;
+        letter-spacing: 1.5px;
+        font-size: 1rem;
+    }
+
+    .calcu h4 {
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-top: 5px;
+        padding-inline: 1rem;
+    }
+    .base, .under , .sagot{
+        width: 100%;
+        border: 1.5px solid #111;
+        height: 50px;
+        font-size: 1rem;
+        text-align: center;
+        align-items: center;
+        padding-inline: .2rem;
+        padding-block: .8rem;
+        box-shadow: 0px 0px 5px 
+        rgba(0,0,0,0.2);
+        margin-bottom: .5rem;
+        border-radius: 10px;
+        background-color: transparent;
+        outline: none;
+        letter-spacing: 2px;
+    }
+    .under:hover {
+        border: 1px solid #615e5e;
+
+    }
+    .base:hover {
+        border: 1px solid #615e5e;
+
+    }
+    .operators {
+        padding-top: .8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+    }
+    button {
+        font-size: 1.4rem;
+        border-radius: 5px;
+        border: none;
+        background-color: transparent;
+        border: 1px solid #111;
+        padding: .3rem .8rem;
+        text-align: center;
+        font-weight: bold;
+        transition: .2s;
+    }
+    .theme {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        border-radius: 5px;
+        border: none;
+        background-color: transparent;
+        border: 1px solid #111;
+        padding: .8rem .5rem;
+        text-align: center;
+        transition: .2s;
+        margin-block: 1rem;
+    }
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    .footer {
+        padding-bottom: 2rem;
+        padding-inline: 1rem;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    @media (max-width: 750px) {
+        .calcu {
+            width: fit-content;
+            margin-inline: .5rem;
+        }
+    }
+    @media (max-width: 350px) {
+        .calcu {
+            width: fit-content;
+            padding-inline: 1rem;
+        }
+
+    }
+
+</style>
+</html>

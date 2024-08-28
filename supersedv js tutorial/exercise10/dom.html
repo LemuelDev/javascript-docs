@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title> Dom manipulation</title>
+
+
+    </head>
+
+    <body>
+        <button class="cart">Add to Cart</button>
+        <br>
+        <br>
+        <!-- <button class="toggle-button js-button" onclick="
+            totoggle();
+        " >Gaming
+        </button>
+        <button class="toggle-button js2-button" onclick="
+             totoggle2();
+       ">Music</button>
+       <button class="toggle-button js3-button" onclick="
+            totoggle3();
+        "> Tech</button> -->
+        <br>
+        <br>
+        <br>
+        <button class="toggle-button js-button" onclick="
+        toggleButton('.js-button');
+      ">Gaming</button>
+  
+      <button class="toggle-button js-button-2" onclick="
+        toggleButton('.js-button-2');
+      ">Music</button>
+  
+      <button class="toggle-button js-button-3" onclick="
+        toggleButton('.js-button-3');
+      ">Tech</button>
+
+
+        <br>
+        <br>
+        <br>       
+         <input placeholder="Enter cost" class="cost" onkeydown="if (event.key === 'Enter') {
+            calculate();
+        }">
+        <button onclick="
+            calculate();
+        " class="calculate">Calculate</button>
+        <p class="errormsg"></p>
+
+        <script src="main.js"></script> 
+
+
+ 
+
+    </body>
+    <style>
+        .cart {
+            padding: 10px 30px;
+            background-color: rgb(255, 216, 20);
+            color: #111;
+            outline: none;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      /* .toggle-button:active {
+        background-color: black;
+        color: white;
+      } */
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+
+      .cost {
+        padding: .5rem 1rem;
+        border: 1px solid;
+
+      }
+      .calculate {
+        background-color: green;
+        border: none;
+        color: white;
+        padding: 9px 15px;
+      }
+
+      .errormsg {
+        color: red;
+      }
+
+        
+    </style>
+
+
+
+
+
+
+
+</html>

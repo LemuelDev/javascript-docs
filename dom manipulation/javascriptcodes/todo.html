@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <button>Press Me</button>
+    <div> Get Groceries</div>
+    <div> Wash Car</div>
+    <div> Make Dinner</div>
+    <script>
+        let todo1 = 'Get Groceries';
+        let todo2 = 'Wash Car';
+        let todo3 = 'Make Dinner';
+
+        // let element = document.createElement('div');
+        // element.innerText = todo3;
+        // document.body.appendChild(element);
+
+        //  element = document.createElement('div');
+        // element.innerText = todo2;
+        // document.body.appendChild(element);
+
+        //  element = document.createElement('div');
+        // element.innerText = todo1;
+        // document.body.appendChild(element);
+
+        // element = document.createElement('button');
+        // element.innerText = 'Click Me';
+        // document.body.appendChild(element);
+
+        // functions
+
+        function addTodo (todoTitle) {
+            let element = document.createElement('div');
+            element.innerText = todoTitle;
+        document.body.appendChild(element);
+        }
+        addTodo(todo1);
+        addTodo(todo2);
+        addTodo(todo3);
+        
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

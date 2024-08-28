@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #FFF8D6;
+    color: #617A55;
+}
+
+.content {
+    display: grid;
+    place-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-inline: 1rem;
+}
+
+.message {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 3rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+    border-radius: 10px;
+}
+.message h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.message button {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    background-color: #A4D0A4;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3S all;
+}
+.message button:hover {
+    background-color: #75af75;
+}
+.hidden {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-height: 750px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #A4D0A4;
+    color: #FFF8D6;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 20;
+    display: none;
+    transition: .3s ;
+}
+.hidden2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-height: 750px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #A4D0A4;
+    color: #FFF8D6;
+    align-items: center;
+    border-radius: 10px;
+    display: none;
+    z-index: 10;
+}
+.hidden p, .hidden2 p {
+    max-height: 300px;
+    font-size: 1.1rem;
+}
+.hidden h4 {
+    font-size: 1.3rem;
+}
+.next {
+    padding: .4rem 1.5rem;
+    margin-top: .5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #FFF8D6;
+    transition: .3s all;
+    cursor: pointer;
+}
+.next:hover {
+    background-color: #f3e8b5;
+}
+.hidden2 span, .hidden2 h4 {
+    display: grid;
+    place-content: end;
+}
+.hidden2 p {
+    line-height: 1.5em;
+}
+.hidden2 h4 {
+    font-size: 1.1em;
+    padding-block-end: .5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+@media(max-width: 575px) {
+    .hidden, .hidden2 {
+        width: 350px;
+   
+    }
+    .hidden2 {
+        height: 500px;
+    }
+}
+@media(max-width: 422px){
+    .hidden, .hidden2 {
+        width: 270px;
+   
+    }
+    .hidden2 {
+        height: 600px;
+    }
+}

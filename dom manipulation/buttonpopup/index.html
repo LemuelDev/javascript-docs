@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button POP UP</title>
+    <style>
+        #messageBox {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 300px;
+          padding: 20px;
+          background-color: #eee;
+          border: 1px solid #ccc;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          z-index: 9999;
+          text-align: center;
+          display: none;
+        }
+        #closeButton {
+          display: inline-block;
+          margin-top: 10px;
+          padding: 5px 10px;
+          background-color: #007bff;
+          color: #fff;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+        #closeButton:hover {
+          background-color: #0069d9;
+        }
+      </style>
+    </head>
+    <body>
+      <button id="orderButton" onclick="showMessage()">Order Now</button>
+      <div id="messageBox">
+        <p>Thank you for purchasing!</p>
+        <button id="closeButton" onclick="hideMessage()">Close</button>
+      </div>
+      <script>
+        function showMessage() {
+          var messageBox = document.getElementById("messageBox");
+          messageBox.style.display = "block";
+        }
+        function hideMessage() {
+          var messageBox = document.getElementById("messageBox");
+          messageBox.style.display = "none";
+        }
+      </script>
+
+
+</body>
+</html>

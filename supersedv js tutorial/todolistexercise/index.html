@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <div class="wrapper">
+            <div class="title">
+                <h4>Todo List</h4>
+            </div>
+            <div class="wrapper-input">
+                <input type="text" placeholder="Create a list" id="textbox">
+                <button onclick="addlist()" class="button"> Add</button>
+                <div class="list">
+
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <script>
+        
+        const txtbox = document.querySelector('#textbox');
+        let divbox = document.querySelector('.list');
+        let listarr = [];
+        let todohtml = '';
+
+        function addlist() {
+        const listbox = txtbox.value;
+        listarr.push(listbox);
+        rendertodolist();
+        txtbox.value = '';
+        console.log(listarr);
+        return listarr;
+        }
+
+        function deleteList(index) {
+        listarr.splice(index, 1);
+        rendertodolist();
+        }
+
+        function rendertodolist() {
+        divbox.innerHTML = '';
+        todohtml = '';
+        
+        for (let i = 0; i < listarr.length; i++) {
+            const arr = listarr[i];
+            const html = `<p>${arr}</p> <button class="delete" onclick="deleteList(${i})">Delete</button> <input type="checkbox">`;
+            todohtml += html;
+        }
+        
+        divbox.innerHTML = todohtml;
+        }
+
+                
+       
+
+
+   
+
+      
+        
+         
+      
+    </script>
+
+ 
+   <script src="main.js"></script>
+
+</body>
+</html> 
+

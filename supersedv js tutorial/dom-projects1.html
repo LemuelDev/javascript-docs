@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PROJECTS 1</title>
+</head>
+
+<style>
+    .subscribe-btn {
+        border-radius: 1.5rem;
+        background-color: #111;
+        color: #fff;
+        padding: .5rem 1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .js-input {
+        padding: .5rem 1rem;
+        outline: none;
+        
+    }
+
+    .calculate {
+        padding: .6rem 1rem;
+        outline: none;
+        background-color: rgb(36, 164, 36);
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+
+
+</style>
+<body>
+
+
+    <p> Youtube Subscribe Button</p>
+
+    <button onclick="
+        subscribe();
+    " class="subscribe-btn">
+        Subscribe</button>
+
+    <p> Amazon Shipping Calculator</p>
+    <p> Orders under $40 = +$10 shipping.</p>
+    <p> Orders over $40 = FREE shipping.</p>
+    <input placeholder="Cost of Order" type="number" class="js-input" onkeydown="
+    if ( event.key === 'Enter'){
+        calculate();
+    }
+    ">
+    <button onclick="
+        calculate();
+    " class="calculate"> Calculate
+    </button>
+    <p class="result"></p>
+
+
+    <button onclick="
+        headsortails('heads')
+    "> HEADS</button>
+    <button onclick="
+        headsortails('tails')
+    "> TAILS</button>
+    <p class="move-result"></p>
+
+    <br>
+    <br>
+    <input type="text" class="name-input" placeholder="Your name here"
+     onkeydown="enterkey()">
+    <button onclick="
+        printname();
+    ">Submit</button>
+    <p class="name-result"></p>
+
+    <br>
+
+    <input class="textbox" placeholder="Type something" onkeyup="   const textbox = document.querySelector('.textbox');
+    const print = document.querySelector('.print-text')
+    print.innerHTML = textbox.value;">
+    <p class="print-text"></p>
+
+
+    <input placeholder="Price of your order" class="ordertoprint">
+    <button onclick="
+        printnumber();
+    ">Submit</button>
+    <p class="printorder"></p>
+
+    <div>
+        <button onclick="
+            printcart();
+            ">Show Quantity</button>
+        <button> Add to Cart </button>
+        <button onclick="
+        quantity += 2;
+        printcart();
+        "> +2 </button>
+         <button onclick="
+            quantity += 3;
+            printcart();
+         "> +3</button>
+         <button onclick="
+         quantity += 4;
+         printcart();
+        "> + 4</button>
+         <button onclick="
+             quantity += 5;
+             printcart();
+            "> + 5 </button>
+         <button onclick="
+          quantity = 0;
+          printcart();
+          ">Remove from cart</button>
+         <button onclick="
+            quantity -= 2;
+            printcart();
+            "> -2</button>
+         <button onclick="
+            quantity -= 3;
+            printcart();
+            "> -3</button>
+        <p class="cart-result"></p>
+
+    </div>
+
+
+
+
+    <script>
+
+        let quantity = 0;
+        function printcart(){
+            const cartresult = document.querySelector('.cart-result')
+            cartresult.innerHTML = `Cart Quantity: ${quantity}`
+        }
+
+        
+        function subscribe(){
+         const subs =  document.querySelector('.subscribe-btn');
+           if (subs.innerText === 'Subscribe'){
+                subs.innerText = 'Subscribed';
+        } else{
+            subs.innerText = 'Subscribe';
+           }
+        }
+
+        function calculate () {
+            const order = document.querySelector('.js-input');
+            const result = document.querySelector('.result');
+
+            let cost = Number(order.value);
+            if (cost < 40) {
+                cost += 10;
+        }
+
+            result.innerHTML = `$${cost}`
+    }
+
+        function headsortails(playermove) {
+            const moveresult = document.querySelector('.move-result');
+            moveresult.innerHTML = `You chose: ${playermove}`;
+        }   
+
+
+        function printname(){
+            const nameinput = document.querySelector('.name-input')
+            const nameresult = document.querySelector('.name-result')
+            
+            nameresult.innerHTML = `Your name is: ${nameinput.value}`;
+            nameinput.value = ''
+        }
+
+        function enterkey(){
+            if (event.key === 'Enter'){
+                printname()
+            }
+        }
+
+        function keyup() {
+            const textbox = document.querySelector('.textbox');
+            const print = document.querySelector('.print-text')
+            print.innerHTML = textbox.value;
+        }
+
+
+        function printnumber(){
+            const orderprint = document.querySelector('.ordertoprint')
+            const printorder = document.querySelector('.printorder')
+
+             let result = Number(orderprint.value)
+             printorder.innerHTML = `$${result}`
+        }
+
+        
+     
+
+
+        
+
+
+
+
+        
+    </script>
+</body>
+</html>

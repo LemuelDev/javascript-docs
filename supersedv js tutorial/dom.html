@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MANIPULATION</title>
+</head>
+<body>
+    
+    <button> HELLO </button>
+    <button class="jsbutton" > KONICHIWA </button>
+
+    <!--  another built-in object in javacript is the
+          document object model or dom.
+    -->
+
+    <script>
+
+        //  dom contains different properties that can use using dot notation
+        // it also has methods.
+        //  we can have html elements inside javascript.
+        //  the dom combines javascript and html together.
+        // the html element is converted into js object
+       
+        // console.log(document.title);
+        // document.title = 'changed'; 
+
+        // console.log(document.body);
+        // console.log(typeof document.body);
+
+        // /* documenet.body.innerHTML */ 
+        // // all the html elements will be selected
+        // document.body.innerHTML= 'changed';
+        // document.body.innerHTML = '<button> GOOD JOB</button>';
+
+        /*
+        document.body.innerHTML = 'hello';
+        document.title = 'Good job';
+        */
+
+
+
+
+        // method 
+        //  a method is a function save inside an object
+
+        console.log(document.querySelector('button').innerHTML);
+        document.querySelector('button').innerHTML = 'Changed';
+        //  ex is button, it will get the first button on the page
+        //  query selector let us get any element from the page and 
+        // put it inside javascript.
+
+        console.log(document.querySelector('.jsbutton').innerHTML);
+        // the dot is class selector, if hastag it is an ID.
+
+        const jsbutton = document.querySelector('.jsbutton');
+        console.log(jsbutton);
+        
+        // dom combines js and html together.
+        // it gives js full control of the webpage.
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+<body>
+   <section>
+    <h2>
+        STOPWATCH WITH JAVASCRIPT
+    </h2>
+    <div>
+        <h1 id="timer">00:00:00</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+   </section>
+
+      <script src="main.js"></script>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        background-color: darkslategrey;
+    }
+    div {
+        padding-inline: 2rem;
+        padding-block: 2rem;
+        border: 1px solid #111;
+        border-radius: 10px;
+        text-align: center;
+        background-color: rgb(52, 109, 109);
+    }
+    section {
+        display: grid;
+        place-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    h1 {
+        font-size: 1.5rem;
+        padding-block: 1rem;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+    H2 {
+        font-size: 1.3rem;
+        letter-spacing: normal;
+        padding-bottom: 1em;
+        color: #fff;
+    }
+    button {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: darkcyan;
+        color: #fff;
+        cursor: pointer;
+        transition: ease .3s all;
+    }
+    button:hover {
+        background-color:rgb(27, 80, 80) ;
+    }
+</style>
+</html>
